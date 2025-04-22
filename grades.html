@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>احصل على شهادتك</title>
+</head>
+<body style="text-align:center; font-family:Arial;">
+  <h2>اكتب اسمك للحصول على شهادتك</h2>
+  <input type="text" id="nameInput" placeholder="اكتب اسمك هنا">
+  <button onclick="getCertificate()">عرض الشهادة</button>
+  <div id="result" style="margin-top:20px;"></div>
+
+  <script>
+    // قاعدة بيانات الشهادات: الاسم => رابط QR للصورة
+    const certificateDB = {
+      "Bug": "certificates/Bug.png",
+      "فاطمة الزهراء": "certificates/fatima.png",
+      "محمد سعود": "certificates/mohammed.png"
+    };
+
+    function getCertificate() {
+      const name = document.getElementById("nameInput").value.trim();
+      const resultDiv = document.getElementById("result");
+
+      if (certificateDB[name]) {
+        resultDiv.innerHTML = `<p>شهادتك:</p>
+          <img src="${certificateDB[name]}" alt="شهادة ${name}" width="300">`;
+      } else {
+        resultDiv.innerHTML = `<p>لم يتم العثور على شهادة بهذا الاسم. تأكد من كتابته بشكل صحيح.</p>`;
+      }
+    }
+  </script>
+</body>
+</html>
+
