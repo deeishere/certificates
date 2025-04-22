@@ -4,10 +4,17 @@
   <meta charset="UTF-8">
   <title>احصل على شهادتك</title>
 </head>
-<body style="text-align:center; font-family:Arial;">
-  <h2>اكتب اسمك للحصول على شهادتك</h2>
-  <input type="text" id="nameInput" placeholder="اكتب اسمك هنا">
-  <button onclick="getCertificate()">عرض الشهادة</button>
+<body style="background-color:black; color:#6A0DAD; text-align:center; font-family:Arial; font-size:24px; margin-top:50px;">
+  
+
+  <img src="CyberLogo.jpg" alt="شعار نادي الأمن السيبراني" style="width:150px; margin-bottom:30px;">
+
+  <h2 style="font-size:32px;">اكتب اسمك للحصول على شهادتك</h2>
+  <input type="text" id="nameInput" placeholder="اكتب اسمك هنا" style="font-size:20px; text-align:center; color:#6A0DAD; background-color:#111; border:1px solid #6A0DAD; padding:5px;">
+  <br><br>
+  <button onclick="getCertificate()" style="font-size:20px; color:#6A0DAD; background-color:#222; border:1px solid #6A0DAD; padding:5px 15px; cursor:pointer;">
+    عرض الشهادة
+  </button>
   <div id="result" style="margin-top:20px;"></div>
 
   <script>
