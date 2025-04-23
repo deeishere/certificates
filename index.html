@@ -122,17 +122,17 @@
 };
 
     function getCertificate() {
-      const name = document.getElementById("nameInput").value.trim();
-      const resultDiv = document.getElementById("result");
-
-    if (certificateDB[name]) {
-      const encodedPath = encodeURIComponent(certificateDB[name]).replace(/%2F/g, '/');
+       const name = document.getElementById("nameInput").value.trim();
+       const resultDiv = document.getElementById("result");
+ 
+     if (certificateDB[name]) {
+       const encodedPath = encodeURIComponent(certificateDB[name]).replace(/%2F/g, '/');
        resultDiv.innerHTML = `<p></p>
-        <img src="${encodedPath}" alt="شهادة ${name}" width="400">`;
-    } else {
-      resultDiv.innerHTML = `<p>لم يتم العثور على شهادة بهذا الاسم. تأكد من كتابته بشكل صحيح.</p>`;
-    }
-    }
+         <img src="${encodedPath}" alt="شهادة ${name}" width="300">`;
+     } else {
+       resultDiv.innerHTML = `<p>لم يتم العثور على شهادة بهذا الاسم. تأكد من كتابته بشكل صحيح.</p>`;
+     }
+     }
   </script>
 </body>
 </html>
